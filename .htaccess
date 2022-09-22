@@ -1,0 +1,9 @@
+ErrorDocument 404 /template-pages/404.php
+
+#RewriteEngine On
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteCond %{SCRIPT_FILENAME} !-f
+#RewriteRule ^signup-page.php/(.*)$ ./template-pages/signup-page.php?query=$1
+#RewriteRule ^index.php/(.*)$       .login-page.php?query=$1
+
+Redirect /index.php /login-page.php
